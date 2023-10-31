@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-import { Console } from "console";
 
 type MainContentProps = {
   themeToggle: () => void;

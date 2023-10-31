@@ -99,33 +99,6 @@ $color-text-light: hsl(200, 15%, 8%); // light-text
   background-color: $color-elements-dark;
 }
 
-/* body {
-  background-color: $color-text-dark; // <- background to $color-background-light;
-}
-.theme-background {
-  color: $color-text-dark; // <- color to $color-text-light
-  background-color: $color-background-dark; // <- background to $color-background-light
-}
-
-.theme-elements {
-  background-color: $color-elements-dark; // <- background to $color-elements-light
-}
-
-.theme-text {
-  color: $color-text-dark; // <- color to $color-text-light
-}
-.header {
-  background-color: $color-elements-dark; // <- color to $color-elements-light
-}
-
-.main-input::placeholder {
-  color: $color-text-dark; // <- color to $color-text-light
-}
-
-.main-filter::selection {
-  background-color: $color-text-dark; // <- color to $color-text-light
-}
- */
 .main-bar--box {
   box-shadow: 0 0 3px $color-shadow; // <- shadow
 }
