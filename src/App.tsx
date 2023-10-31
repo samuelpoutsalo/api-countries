@@ -3,7 +3,7 @@ import "./App.scss";
 import HeaderFile from "./HeaderFile";
 import MainContent from "./MainContent";
 import ExtraContent from "./ExtraContent";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 
 function App() {
   const [darkMode, setDarkMode] = useState<string>("enabled");
@@ -188,7 +188,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <HeaderFile themeToggle={themeToggle} />
       <Routes>
         <Route
@@ -200,7 +200,7 @@ function App() {
           element={<ExtraContent themeToggle={themeToggle} />}
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
