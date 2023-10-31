@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "//samuelpoutsalo.github.io/api-countries/static/css/main.a7501204.css",
-    "main.js": "//samuelpoutsalo.github.io/api-countries/static/js/main.d20bbebc.js",
-    "index.html": "//samuelpoutsalo.github.io/api-countries/index.html",
-    "main.a7501204.css.map": "//samuelpoutsalo.github.io/api-countries/static/css/main.a7501204.css.map",
-    "main.d20bbebc.js.map": "//samuelpoutsalo.github.io/api-countries/static/js/main.d20bbebc.js.map"
+    "main.css": "/api-countries/static/css/main.a7501204.css",
+    "main.js": "/api-countries/static/js/main.d20bbebc.js",
+    "index.html": "/api-countries/index.html",
+    "main.a7501204.css.map": "/api-countries/static/css/main.a7501204.css.map",
+    "main.d20bbebc.js.map": "/api-countries/static/js/main.d20bbebc.js.map"
   },
   "entrypoints": [
     "static/css/main.a7501204.css",
