@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-type MainContentProps = {
-  themeToggle: () => void;
-};
-function ExtraContent({ themeToggle }: MainContentProps) {
+
+function ExtraContent() {
   const [countries, setCountries] = useState<Country | null>(null);
   const { ccn3 } = useParams();
 
@@ -57,7 +55,7 @@ function ExtraContent({ themeToggle }: MainContentProps) {
   return (
     <section className="main theme-background">
       <div className="main-bar">
-        <Link to={"/"} onClick={themeToggle}>
+        <Link to={"/"}>
           <button className="main-input theme-elements theme-text main-bar--box back-btn">
             <ArrowBackIcon className="arrowIcon" />
             Back
@@ -74,7 +72,7 @@ function ExtraContent({ themeToggle }: MainContentProps) {
                 src={countries.flags.png}
               />
             </div>
-            <div className="extra-text-container">
+            <div className="extra-text-container extra-text-container-default">
               <h1 className="extra-h1">{countries.name.common}</h1>{" "}
               <div className="extra-information-1-and-2">
                 <div className="extra-information-1">

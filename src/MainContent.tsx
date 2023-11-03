@@ -3,11 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import SearchIcon from "@mui/icons-material/Search";
 
-type MainContentProps = {
-  themeToggle: () => void;
-};
-
-function MainContent({ themeToggle }: MainContentProps) {
+function MainContent() {
   const [selectedCountry, setSelectedCountry] = useState<String>("");
   const [selectedRegion, setSelectedRegion] = useState<String>("");
   const [countries, setCountries] = useState<Country[]>([]);
@@ -62,7 +58,6 @@ function MainContent({ themeToggle }: MainContentProps) {
         .then((res) => {
           console.log(res);
           setCountries(res.data);
-          themeToggle();
         })
         .catch((err) => {
           console.log(err);

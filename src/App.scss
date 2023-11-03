@@ -17,86 +17,144 @@ $color-background-light: hsl(0, 0%, 98%); // light-background
 $color-elements-light: hsl(0, 0%, 100%); // light-elements
 $color-text-light: hsl(200, 15%, 8%); // light-text
 
-.light-background {
-  background-color: $color-background-light;
-}
-
-.light-text {
-  color: $color-text-light;
-}
-
-.light-elements {
-  background-color: $color-elements-light;
-}
-
-.light-cards {
-  color: $color-text-light;
-  background-color: $color-elements-light;
-}
-
-.light-background-double {
-  color: $color-text-light;
-  background-color: $color-background-light;
-}
-
-.pseudo-light {
-  ::-webkit-input-placeholder {
-    color: $color-text-light;
-  }
-  ::-moz-placeholder {
-    color: $color-text-light;
-  }
-
-  :-ms-input-placeholder {
-    color: $color-text-light;
-  }
-  ::selection {
-    background-color: $color-text-light;
-  }
-  color: $color-text-light;
-  background-color: $color-elements-light;
-}
-
-.dark-background {
+.dark-theme {
   background-color: $color-background-dark;
-}
-
-.dark-text {
-  color: $color-text-dark;
-}
-
-.default-cards {
-  color: $color-text-dark;
-  background-color: $color-elements-dark;
-}
-
-.dark-card {
-  color: $color-text-dark;
-  background-color: $color-elements-dark;
-}
-
-.dark-elements {
-  background-color: $color-elements-dark;
-}
-
-.dark-background-double {
-  color: $color-text-light;
-  background-color: $color-background-dark;
-}
-
-.pseudo-dark {
-  ::-webkit-input-placeholder {
-    color: $color-text-dark;
-  }
-  ::-moz-placeholder {
+  .theme-text {
     color: $color-text-dark;
   }
 
-  :-ms-input-placeholder {
+  #theme-toggle-button {
     color: $color-text-dark;
   }
-  color: $color-text-dark;
-  background-color: $color-elements-dark;
+
+  .theme-link {
+    color: $color-text-dark;
+  }
+
+  .theme-elements {
+    background-color: $color-elements-dark;
+  }
+
+  .theme-background {
+    color: $color-text-dark;
+    background-color: $color-background-dark;
+  }
+
+  .header {
+    background-color: $color-elements-dark;
+  }
+
+  .main-input {
+    ::-webkit-input-placeholder {
+      color: $color-text-dark;
+    }
+    ::-moz-placeholder {
+      color: $color-text-dark;
+    }
+
+    :-ms-input-placeholder {
+      color: $color-text-dark;
+    }
+    color: $color-text-dark;
+    background-color: $color-elements-dark;
+  }
+
+  .main-filter {
+    ::-webkit-input-placeholder {
+      color: $color-text-dark;
+    }
+    ::-moz-placeholder {
+      color: $color-text-dark;
+    }
+
+    :-ms-input-placeholder {
+      color: $color-text-dark;
+    }
+    color: $color-text-dark;
+    background-color: $color-elements-dark;
+  }
+
+  .extra-text-container {
+    color: $color-text-dark;
+  }
+
+  .card-text-container-default {
+    color: $color-text-dark;
+  }
+
+  .default-cards {
+    color: $color-text-dark;
+    background-color: $color-elements-dark;
+  }
+}
+.light-theme {
+  .theme-text {
+    color: $color-text-light;
+  }
+
+  #theme-toggle-button {
+    color: $color-text-light;
+  }
+
+  .theme-link {
+    color: $color-text-light;
+  }
+
+  .theme-elements {
+    background-color: $color-elements-light;
+  }
+
+  .theme-background {
+    color: $color-text-light;
+    background-color: $color-background-light;
+  }
+
+  .header {
+    background-color: $color-elements-light;
+  }
+
+  .main-input {
+    ::-webkit-input-placeholder {
+      color: $color-text-light;
+    }
+    ::-moz-placeholder {
+      color: $color-text-light;
+    }
+
+    :-ms-input-placeholder {
+      color: $color-text-light;
+    }
+    color: $color-text-light;
+    background-color: $color-elements-light;
+  }
+
+  .main-filter {
+    ::-webkit-input-placeholder {
+      color: $color-text-light;
+    }
+    ::-moz-placeholder {
+      color: $color-text-light;
+    }
+
+    :-ms-input-placeholder {
+      color: $color-text-light;
+    }
+    color: $color-text-light;
+    background-color: $color-elements-light;
+  }
+
+  .extra-text-container {
+    color: $color-text-light;
+  }
+
+  .card-text-container-default {
+    color: $color-text-light;
+  }
+
+  .default-cards {
+    color: $color-text-light;
+    background-color: $color-elements-light;
+  }
 }
 
 .main-bar--box {
@@ -217,14 +275,6 @@ img {
   padding: 1rem 2rem;
 }
 
-.card-text-container-default {
-  color: $color-text-dark;
-}
-
-.card-text-container-dark {
-  color: $color-text-dark;
-}
-
 .card-text-container-light {
   color: $color-text-light;
 }
@@ -265,6 +315,10 @@ img {
 
 .extra-text-container {
   width: 40rem;
+}
+
+.extra-text-container-default {
+  color: $color-text-dark;
 }
 
 .extra-information-1-and-2 {
