@@ -7,6 +7,8 @@ function MainContent() {
   const [selectedCountry, setSelectedCountry] = useState<String>("");
   const [selectedRegion, setSelectedRegion] = useState<String>("");
   const [countries, setCountries] = useState<Country[]>([]);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [items, setItems] = useState<Country[]>([]);
   console.log(selectedCountry + " " + selectedRegion);
 
   interface Country {
@@ -32,38 +34,34 @@ function MainContent() {
   }
 
   useEffect(() => {
-    if (selectedRegion === "" && selectedCountry === "") {
-      axios
-        .get("https://restcountries.com/v3.1/all")
-        .then((res) => {
-          console.log(res.data);
-          setCountries(res.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    } else if (selectedCountry !== "") {
-      axios
-        .get("https://restcountries.com/v3.1/name/" + selectedCountry)
-        .then((res) => {
-          console.log(res.data);
-          setCountries(res.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    } else if (selectedRegion !== "") {
-      axios
-        .get("https://restcountries.com/v3.1/region/" + selectedRegion)
-        .then((res) => {
-          console.log(res);
-          setCountries(res.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
-  }, [selectedRegion, selectedCountry]);
+    getData();
+  }, []);
+
+  const getData = () => {
+    axios
+      .get("https://restcountries.com/v3.1/all")
+      .then((res) => {
+        setIsLoaded(true);
+        setItems(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    const result = items.filter(
+      (item) =>
+        (!selectedCountry ||
+          item.name.common
+            .toLowerCase()
+            .includes(selectedCountry.toLowerCase())) &&
+        (!selectedRegion ||
+          item.region.toLowerCase() === selectedRegion.toLowerCase())
+    );
+
+    setCountries(result);
+  }, [selectedRegion, selectedCountry, items]);
 
   return (
     <section className="main theme-background">
@@ -85,7 +83,7 @@ function MainContent() {
         >
           <option value="">Filter by Region</option>
           <option value="africa">Africa</option>
-          <option value="america">America</option>
+          <option value="americas">America</option>
           <option value="asia">Asia</option>
           <option value="europe">Europe</option>
           <option value="oceania">Oceania</option>
